@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org"
+  th:replace="~{fragments/layout :: layout (~{::body},'reports')}">
+
+  <body>
+  
+  
+    <h2>Owner Information</h2>
+  
+  
+    <table class="table table-striped" th:object="${report}">
+      <tr>
+        <th>Name</th>
+        <td><b th:text="*{name}"></b></td>
+      </tr>
+      <tr>
+        <th>Description</th>
+        <td th:text="*{description}" /></td>
+      </tr>
+      <tr>
+        <th>URL</th>
+        <td th:text="*{reporturl}" /></td>
+      </tr>
+    </table>
+  
+  </body>
+
+</html>

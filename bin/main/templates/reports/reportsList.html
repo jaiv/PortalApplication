@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{fragments/layout :: layout (~{::body},'reports')}">
+
+  <body>
+
+    <h2>Reports</h2>
+
+    <table id="vets" class="table table-striped">
+        <thead>
+        <tr>
+            <th style="width: 150px;">Name</th>
+            <th style="width: 200px;">Description</th>
+            <th style="width: 120px">URL</th>
+        </tr>
+        </thead>
+        <tbody>
+          <tr th:each="report : ${selections}">
+              <td>
+                  <a th:href="@{/reports/__${report.id}__}" th:text="${report.name}"/></a>
+              </td>
+              <td th:text="${report.description}"/>
+              <td th:text="${report.reporturl}"/>
+          </tr>
+        </tbody>
+    </table>
+
+  </body>
+</html>
