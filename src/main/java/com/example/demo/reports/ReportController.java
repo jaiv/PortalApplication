@@ -21,11 +21,6 @@ public class ReportController {
 		this.reportrepository = reps;
 	}
 
-	/*
-	 * @ModelAttribute("report") public Optional<Reports>
-	 * findReport(@PathVariable("id") Long id) { return this.report.findById(id); }
-	 */
-
 	@GetMapping("/reports/find")
 	public String initFindForm(Map<String, Object> model) {
 		model.put("report", new Reports());
@@ -56,17 +51,6 @@ public class ReportController {
 			return "reports/reportsList";
 		}
 	}
-
-	/*@GetMapping("/reports/{reportId}")
-	public ModelAndView showReport(@PathVariable("reportId") Long reportId) {
-		ModelAndView mav = new ModelAndView("reports/reportDetails");
-		
-		Reports rs =  this.reportrepository.findById(reportId);
-		this.reportrepository.get
-		mav.addObject(rs);//this.reportrepository.findById(id)
-		//this.reports.getOne(reportId)
-		return mav;
-	}*/
 	
 	@GetMapping("/reports/{reportId}")
 	public ModelAndView showReport(@PathVariable("reportId") Long reportId) {

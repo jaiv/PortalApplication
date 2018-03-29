@@ -36,7 +36,7 @@ public class Demo1Application extends SpringBootServletInitializer {
 	        };
 	    }
 	    
-	    @Bean
+	    /*@Bean
 		CommandLineRunner init(AccountRepository accountRepository,
 				BookmarkRepository bookmarkRepository) {
 			return (evt) -> Arrays.asList("jhoeller,dsyer,pwebb,ogierke,rwinch,mfisher,mpollack,jlong".split(","))
@@ -45,6 +45,6 @@ public class Demo1Application extends SpringBootServletInitializer {
 								bookmarkRepository.save(new Bookmark(account,"http://bookmark.com/1/" + a, "A description"));
 								bookmarkRepository.save(new Bookmark(account,"http://bookmark.com/2/" + a, "A description"));
 							});
-		}
+		}*/
 	    
 }
